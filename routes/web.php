@@ -68,7 +68,7 @@ Route::middleware(['role', 'auth'])->group(function () {
 
     Route::get('/ta-penjualan/index', 'TaPenjualanController@index');
     Route::get('/ta-penjualan/new-transaction', 'TaPenjualanController@NewTransaction');
-    Route::post('/ta-penjualan/add-list', 'TaPenjualanController@addList');
+    Route::get('/ta-penjualan/add-list', 'TaPenjualanController@addList');
     Route::get('/ta-penjualan/delete-list', 'TaPenjualanController@deleteList');
     Route::get('/ta-penjualan/increase-qty-list', 'TaPenjualanController@tambahQtyList');
     Route::get('/ta-penjualan/decrease-qty-list', 'TaPenjualanController@kurangQtyList');

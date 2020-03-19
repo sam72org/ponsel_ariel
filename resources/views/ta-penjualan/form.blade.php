@@ -38,14 +38,17 @@
             <div class="box-body">
               <div class="row">
                 <div class="col-md-4">
-                  <div class="input-group">
-                    <input type="hidden" name="no_penjualan" id="no_penjualan" class="form-control" value="{{ $no_penjualan }}">
+                  <div class="input-group"><!-- 
+                    <input type="hidden" name="no_penjualan" id="no_penjualan" class="form-control" value="{{ $no_penjualan }}"> -->
 
-                    <input type="text" id="kode_barcode" class="form-control" autofocus="" placeholder="Scan Barcode Disini...">
+                    <input type="text" id="kode_barcode" class="form-control" autofocus="" placeholder="Scan Barcode Disini..." autocomplete="off">
                     <span class="input-group-btn">
                       <button type="button" class="btn btn-info btn-flat" data-toggle="modal" data-target="#modalBarang"><i class="fa fa-search"></i></button>
                     </span>
                   </div>
+                </div>
+                <div class="col-md-2">
+                  <button type="submit" id="btnAddList" hidden="true"></button>
                 </div>
               </div>
             </div>

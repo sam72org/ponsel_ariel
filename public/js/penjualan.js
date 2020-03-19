@@ -7,7 +7,7 @@ $(document).on('click', '.btn-pilih-penjualan', function(e){
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        type: "POST",
+        type: "GET",
         url: "add-list",
         data: {'barcode' : barcode},
         success: function (data) {
@@ -20,15 +20,15 @@ $(document).on('click', '.btn-pilih-penjualan', function(e){
     $('#kode_barcode').val('');
 });
 
-$('#kode_barcode').change(function() {
-
+$(document).on('click', '#btnAddList', function(e){
+    e.preventDefault();
     var barcode = $('#kode_barcode').val();
 
     $.ajax({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         },
-        type: 'POST',
+        type: 'get',
         url: "add-list",
         data: {'barcode' : barcode},
         success: function (data) {
